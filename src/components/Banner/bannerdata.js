@@ -1,4 +1,4 @@
-import img1 from "../../../public/banners/Big sale.jpg";
+import img1 from "../../../public/banners/BigSale.jpg";
 import img2 from "../../../public/banners/Electronics.jpg";
 import img3 from "../../../public/banners/Fashion.jpg";
 import img4 from "../../../public/banners/Gaming.jpg";
