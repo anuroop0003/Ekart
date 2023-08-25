@@ -8,8 +8,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import * as Yup from "yup";
+import Logo from "../../public/Logo.svg";
 import LoginBg from "../../public/loginbg.png";
-import Logo from "../../public/logo.svg";
 import GoogleSvg from "../../public/svg/google.svg";
 import { auth, provider } from "../firebaseConfig/Config";
 
