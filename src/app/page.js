@@ -20,6 +20,7 @@ export default function Home() {
     showPassword: true,
     passwordLabel: "Generate Password!",
   });
+
   // Forlik Validation
   const validationSchema = Yup.object().shape({
     password: showFields.showPassword ? Yup.string().required("Password is required") : Yup.string(),
@@ -50,6 +51,7 @@ export default function Home() {
                 email: formik.values.email,
                 name: formik.values.email.split("@")[0],
                 photoURL: res?.data?.photoURL,
+                token: res?.data?.token,
               }),
             );
             router.push("/homepage");
@@ -85,6 +87,7 @@ export default function Home() {
                 email: authres.user.email,
                 name: authres.user.displayName,
                 photoURL: authres.user.photoURL,
+                token: res?.data?.token,
               }),
             );
             router.push("/homepage");

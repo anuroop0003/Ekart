@@ -1,10 +1,12 @@
+"use client";
 import axios from "axios";
 
 const AxiosInstance = axios.create({
-  baseURL: "http://localhost:3333",
+  // baseURL: process.env.Base_URL,
+  baseURL: "https://localhost:3333/api",
   headers: {
     "Content-Type": "application/json",
-    // "console-token": import.meta.env.VITE_CONSOLE_TOKEN,
+    Authorization: JSON.parse(localStorage.getItem("user"))?.token,
   },
 });
 
