@@ -1,10 +1,10 @@
-import img1 from "../../../public/banners/BigSale.jpg";
-import img2 from "../../../public/banners/Electronics.jpg";
-import img3 from "../../../public/banners/Fashion.jpg";
-import img4 from "../../../public/banners/Gaming.jpg";
-import img5 from "../../../public/banners/Graphics.jpg";
-import img6 from "../../../public/banners/Phones.jpg";
-import img7 from "../../../public/banners/Watches.jpg";
+import img1 from "../../assets/banners/BigSale.jpg";
+import img2 from "../../assets/banners/Electronics.jpg";
+import img3 from "../../assets/banners/Fashion.jpg";
+import img4 from "../../assets/banners/Gaming.jpg";
+import img5 from "../../assets/banners/Graphics.jpg";
+import img6 from "../../assets/banners/Phones.jpg";
+import img7 from "../../assets/banners/Watches.jpg";
 
 export const BannerData = [
   {

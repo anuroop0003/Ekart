@@ -3,8 +3,8 @@ import axios from "axios";
 import { getUserToken } from "./StorageServices";
 
 const AxiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_Base_URL,
-  // baseURL: "https://localhost:3333/api",
+  baseURL: import.meta.env.VITE_Base_URL,
+  // baseURL: "http://localhost:3333/api",
   headers: {
     "Content-Type": "application/json",
     Authorization: getUserToken(),

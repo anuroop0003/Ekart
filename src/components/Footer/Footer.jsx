@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Logo from "../../../public/logo light.svg";
+import Logo from "../../assets/logo light.svg";
 
 export default function Footer() {
   const quotesData = [
@@ -57,8 +56,7 @@ export default function Footer() {
       who: "Neil Armstrong",
     },
     {
-      quote:
-        "You can fool all of the people some of the time, and some of the people all of the time, but you can't fool all of the people all of the time.",
+      quote: "You can fool all of the people some of the time, and some of the people all of the time, but you can't fool all of the people all of the time.",
       who: "Abraham Lincoln",
     },
     {
@@ -69,13 +67,13 @@ export default function Footer() {
 
   const randomIndex = Math.floor(Math.random() * quotesData.length);
   return (
-    <div className="bg-black text-white flex flex-col justify-center items-center pt-10 mt-24">
-      <Image alt="LoginBg" priority height={100} width={100} src={Logo} />
-      <div className="py-5">
-        <p className="text-center text-base">{quotesData[randomIndex].quote}</p>
-        <p className="text-right">- {quotesData[randomIndex].who}</p>
+    <div className='bg-black text-white flex flex-col justify-center items-center pt-10 mt-24'>
+      <img alt='LoginBg' height={100} width={100} src={Logo} />
+      <div className='py-5'>
+        <p className='text-center text-base'>{quotesData[randomIndex].quote}</p>
+        <p className='text-right'>- {quotesData[randomIndex].who}</p>
       </div>
-      <p className="text-center text-xs py-5">Copyright © 2023 Ekart, Inc. All rights reserved.</p>
+      <p className='text-center text-xs py-5'>Copyright © 2023 Ekart, Inc. All rights reserved.</p>
     </div>
   );
 }
