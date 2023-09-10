@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
-import { PrivateRoute, PublicRoute } from "./utils/userRoutes";
+import { PrivateRoute, PublicRoute } from "./utils/UserRoutes";
 
 export default function App() {
   return (
