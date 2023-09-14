@@ -112,8 +112,8 @@ export default function Login() {
         <div className='w-[50%] h-full hidden justify-center items-center overflow-hidden lg:flex xl:flex'>
           <img alt='LoginBg' className='object-cover shrink-0 min-w-full max-w-full h-full' src={LoginBg} />
         </div>
-        <div className='flex items-center justify-center grow max-h-full overflow-y-auto'>
-          <div className='bg-white p-7 rounded-xl border-4 border-black m-5 w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:m-10 md:m-0'>
+        <div className='flex justify-center grow max-h-full p-5'>
+          <div className='bg-white p-7 rounded-xl overflow-y-auto login-form-container border-4 border-black m-5 w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:m-10 md:m-0'>
             <div className='inline-flex justify-center items-center w-full'>
               <img title='E KART' height={100} width={100} alt='Logo' src={Logo} />
             </div>
