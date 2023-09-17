@@ -7,7 +7,7 @@ export default function Banner() {
   useEffect(() => {
     const timer = setTimeout(() => {
       handleImageToggle(currentIndex + 1);
-    }, 10000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [currentIndex]);
@@ -21,11 +21,11 @@ export default function Banner() {
 
   return (
     <div id='default-carousel' className='relative w-full p-2.5' data-carousel='slide'>
-      <div className='relative h-56 overflow-hidden rounded-lg md:h-[600px]'>
+      <a href={`/product/${BannerData[currentIndex].category}/${BannerData[currentIndex].key}`} className='relative h-56 overflow-hidden rounded-lg md:h-[600px]'>
         <div className='duration-100 transition-all w-full h-full' data-carousel-item>
           <img loading='eager' className='w-full h-full object-fill' alt={BannerData[currentIndex].name} src={BannerData[currentIndex].url} />
         </div>
-      </div>
+      </a>
 
       <div className='absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2'>
         {BannerData.map((item, i) => (

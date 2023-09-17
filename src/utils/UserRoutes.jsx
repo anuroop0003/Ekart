@@ -1,9 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom";
+import Layout from "../layout/Layout";
 import { getUserToken } from "./StorageServices";
 
 function PrivateRoute() {
   const user = getUserToken();
-  return user ? <Outlet /> : <Navigate to='/login' />;
+  return user ? <Layout><Outlet /></Layout> : <Navigate to='/login' />;
 }
 
 function PublicRoute() {
@@ -12,3 +13,4 @@ function PublicRoute() {
 }
 
 export { PrivateRoute, PublicRoute };
+

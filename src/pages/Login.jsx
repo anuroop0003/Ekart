@@ -9,8 +9,9 @@ import LoginBg from "../assets/loginbg.png";
 import GoogleSvg from "../assets/svg/google.svg";
 import CustomButton from "../components/CustomButton/CustomButton";
 import CustomInput from "../components/CustomInput/CustomInput";
-import { Log_In, Send_Mail } from "../utils/ApiConfig";
+import { Log_In, Send_Mail } from "../utils/ApiServices";
 import { auth, provider } from "../utils/firebaseConfig/Config";
+import { setUserData } from "../utils/StorageServices";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ export default function Login() {
     onSubmit: (values) => {
       if (!showFields.showPassword)
         Send_Mail({ email: formik.values.email }).then((res) => {
-          console.log(res);
+          setShowFields({ buttonLabel: "Log In", showPassword: true, passwordLabel: "Generate Password!" });
         });
       if (showFields.showPassword) {
         Log_In({
@@ -43,16 +44,13 @@ export default function Login() {
           name: formik.values.email.split("@")[0],
         })
           .then((res) => {
-            localStorage.setItem(
-              "user",
-              JSON.stringify({
-                email: formik.values.email,
-                name: formik.values.email.split("@")[0],
-                photoURL: res?.data?.photoURL,
-                token: res?.data?.token,
-              })
-            );
-            navigate("/");
+            setUserData({
+              email: formik.values.email,
+              name: formik.values.email.split("@")[0],
+              photoURL: res?.data?.photoURL,
+              token: res?.data?.token,
+            });
+            setTimeout(() => navigate("/"), 1000);
           })
           .catch((err) => {
             console.log("err", err);
@@ -78,16 +76,13 @@ export default function Login() {
       .then((authres) => {
         Log_In({ email: authres.user.email, name: authres.user.displayName, photoURL: authres.user.photoURL })
           .then((res) => {
-            localStorage.setItem(
-              "user",
-              JSON.stringify({
-                email: authres.user.email,
-                name: authres.user.displayName,
-                photoURL: authres.user.photoURL,
-                token: res?.data?.token,
-              })
-            );
-            navigate("/");
+            setUserData({
+              email: authres.user.email,
+              name: authres.user.displayName,
+              photoURL: authres.user.photoURL,
+              token: res?.data?.token,
+            });
+            setTimeout(() => navigate("/"), 3000);  
           })
           .catch((err) => {
             console.log("err", err);

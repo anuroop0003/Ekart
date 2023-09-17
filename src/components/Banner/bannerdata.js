@@ -11,35 +11,49 @@ export const BannerData = [
     url: img1,
     name: "Big sale",
     index: 0,
+    key: "Computer Accessories",
+    "category": "category_2"
   },
   {
     url: img2,
     name: "Electronics",
     index: 1,
+    key: "Electronics",
+    "category": "category_1"
   },
   {
     url: img3,
     name: "Fashion",
     index: 2,
+    key: "Women's wear",
+    "category": "category_1"
   },
   {
     url: img4,
     name: "Gaming",
     index: 3,
+    key: "Gaming",
+    "category": "category_2"
   },
   {
     url: img5,
     name: "Graphics",
     index: 4,
+    key: "Gaming and Accessories",
+    "category": "category_2"
   },
   {
     url: img6,
     name: "Phones",
     index: 5,
+    key: "Mobile Accessories",
+    "category": "category_2"
   },
   {
     url: img7,
     name: "Watches",
     index: 6,
+    key: "Watches",
+    "category": "category_2"
   },
 ];

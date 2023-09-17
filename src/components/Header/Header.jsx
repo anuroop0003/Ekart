@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Logo from "../../assets/logo light.svg";
-import { List_Categories } from "../../utils/ApiConfig";
+import { List_Categories } from "../../utils/ApiServices";
 
 export default function Header() {
   const userDetails = JSON.parse(localStorage.getItem("user"));
@@ -22,8 +22,8 @@ export default function Header() {
         <div
           className='absolute mx-5 flex flex-wrap transition-opacity group-hover:visible left-0 p-5 group-hover:h-auto group-hover:opacity-100
         invisible h-0 opacity-0 z-50 top-[58px] bg-white rounded-xl'>
-          {categories.map((item) => (
-            <a href='#' key={item} className='w-[50%] sm:w-[50%] md:w-[33%] lg:w-[20%] h-full font-medium hover:underline cursor-pointer text-black'>
+          {categories?.data?.map((item) => (
+            <a href={`/product/${categories.type}/${item}`} key={item} className='w-[50%] sm:w-[50%] md:w-[33%] lg:w-[20%] h-full font-medium hover:underline cursor-pointer text-black'>
               {item}
             </a>
           ))}
