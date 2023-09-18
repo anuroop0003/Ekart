@@ -67,7 +67,7 @@ export default function Footer() {
 
   const randomIndex = Math.floor(Math.random() * quotesData.length);
   return (
-    <div className='bg-black text-white flex flex-col justify-center items-center pt-10 mt-24'>
+    <div className='bg-black text-white flex flex-col justify-center items-center pt-10'>
       <img alt='LoginBg' height={100} width={100} src={Logo} />
       <div className='py-5'>
         <p className='text-center text-base'>{quotesData[randomIndex].quote}</p>
