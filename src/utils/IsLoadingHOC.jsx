@@ -11,7 +11,7 @@ export default function IsLoadingHOC(WrappedComponent) {
         useEffect(() => {
             const timer = setTimeout(() => {
                 dispatch(hideHOCLoader());
-            }, 2000);
+            }, 500);
             return (() => clearTimeout(timer));
         }, []);
 

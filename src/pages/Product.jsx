@@ -19,7 +19,7 @@ export default function Product() {
 
   return (fetchData.length > 0 ? <div className='relative flex-wrap rounded-lg flex'>
     {fetchData.map((item) => (
-      <div href="/product" key={item._id} className='flex m-5 flex-col min-w-[calc(33%-36px)] max-w-[calc(33%-36px)] items-center shadow-sm p-5 bg-lime-100 rounded-lg hover:bg-yellow-100 hover:cursor-pointer'>
+      <div href="/product" key={item._id} className='flex m-5 flex-col max-w-[calc(100%-40px)] min-w-[calc(100%-40px)] md:min-w-[calc(50%-40px)] md:max-w-[calc(50%-40px)] lg:min-w-[calc(33.33%-40px)] xl:min-w-[calc(25%-40px)] xl:max-w-[calc(25%-40px)] lg:max-w-[calc(33.33%-40px)] items-center shadow-sm p-5 bg-lime-100 rounded-lg hover:bg-yellow-100 hover:cursor-pointer'>
         <div className='relative flex justify-center items-center min-w-[200px] min-h-[200px] max-w-[200px] max-h-[200px]'>
           <img loading="eager" src={item.image_links} alt='Mobile Cover' className='rounded-lg max-w-full max-h-full object-cover' />
           {/* <img src={ProductBackground} alt='Product Background' className='absolute rounded-lg max-w-full max-h-full object-cover' /> */}

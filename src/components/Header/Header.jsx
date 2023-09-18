@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <div className='bg-gray-800 h-20 w-full flex  items-center relative'>
-      <img title='E KART' height={60} width={60} alt='Logo' className='mx-3' src={Logo} />
+      <img title='E KART' onClick={() => navigate("/")} height={60} width={60} alt='Logo' className='mx-3 cursor-pointer' src={Logo} />
       <div className="grow">
         <span className='bg-gray-900 transition-opacity hover:bg-gray-700 text-white group rounded-md px-3 py-2 ml-5 text-sm font-medium cursor-pointer'>
           Categories
@@ -39,10 +39,10 @@ export default function Header() {
         </span>
       </div>
       <span className="flex justify-center items-center relative px-3 group">
-        <img height={40} width={40} alt='Logo' className='cursor-pointer group-hover:item' src={userDetails?.photoURL} />
+        <img height={40} width={40} alt='Logo' className='rounded-full cursor-pointer group-hover:item' src={userDetails?.photoURL} />
         <div className="absolute hidden group-hover:block border-black border-2 bg-gray-100 rounded-xl top-full z-50 right-[10px] p-2" id="user-detail">
-          <p className="whitespace-nowrap font-mono">{userDetails?.name || userDetails?.email}</p>
-          <span className="text-center mt-2 cursor-pointer whitespace-nowrap hover:underline font-mono bg-black text-white p-1 rounded-xl" onClick={() => handleLogOut()}>Log Out</span>
+          <p className="whitespace-nowrap mb-2 font-mono">{userDetails?.name || userDetails?.email}</p>
+          <p className="text-center cursor-pointer hover:underline font-mono bg-black text-white p-1 rounded-xl" onClick={() => handleLogOut()}>Log Out</p>
         </div>
       </span>
     </div>
