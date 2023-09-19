@@ -24,7 +24,7 @@ export default function Categories() {
             <img src={MobileCover} height={100} width={100} alt='Mobile Cover' className='rounded-lg' />
             <img src={ProductBackground} height={100} width={100} alt='Product Background' className='absolute rounded-lg' />
           </div>
-          <p className='font-bold text-center mt-5 text-black min-h-[48px]'>{item}</p>
+          <p className='font-bold text-center mt-5 text-black min-h-[48px] font-mono'>{item}</p>
         </a>
       ))}
     </div>
