@@ -12,7 +12,7 @@ export default function App() {
       <Route element={<PrivateRoute />}>
         <Route path='/' element={<Home />} />
         <Route path='/product/:category/:type' element={<Product />} />
-        <Route path='/:name' element={<SelectedProduct />} />
+        <Route path='/:id' element={<SelectedProduct />} />
       </Route>
       <Route element={<PublicRoute />}>
         <Route path='/login' element={<Login />} />

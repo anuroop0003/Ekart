@@ -21,10 +21,10 @@ export default function Categories() {
       {categories?.data?.map((item) => (
         <a href={`/product/${categories.type}/${item}`} key={item} className='flex flex-auto flex-col justify-center h-full min-w-[150px] max-w-[150px] shadow-sm p-[10px] bg-slate-200 rounded-lg hover:bg-yellow-200 hover:cursor-pointer'>
           <div className='relative w-full h-full bg-contain flex justify-center items-center'>
-            <img src={MobileCover} height={100} width={100} alt='Mobile Cover' className='rounded-lg' />
-            <img src={ProductBackground} height={100} width={100} alt='Product Background' className='absolute rounded-lg' />
+            <img loading="eager" src={MobileCover} height={100} width={100} alt='Mobile Cover' className='rounded-lg' />
+            <img loading="eager" src={ProductBackground} height={100} width={100} alt='Product Background' className='absolute rounded-lg' />
           </div>
-          <p className='font-bold text-center mt-5 text-black min-h-[48px] font-mono'>{item}</p>
+          <p className='font-bold text-center mt-5 text-black min-h-[48px]'>{item}</p>
         </a>
       ))}
     </div>

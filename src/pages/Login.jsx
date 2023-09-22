@@ -10,8 +10,8 @@ import GoogleSvg from "../assets/svg/google.svg";
 import CustomButton from "../components/CustomButton/CustomButton";
 import CustomInput from "../components/CustomInput/CustomInput";
 import { Log_In, Send_Mail } from "../utils/ApiServices";
-import { auth, provider } from "../utils/firebaseConfig/Config";
 import { setUserData } from "../utils/StorageServices";
+import { auth, provider } from "../utils/firebaseConfig/Config";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ export default function Login() {
               photoURL: authres.user.photoURL,
               token: res?.data?.token,
             });
-            setTimeout(() => navigate("/"), 3000);  
+            setTimeout(() => navigate("/"), 3000);
           })
           .catch((err) => {
             console.log("err", err);
@@ -105,12 +105,12 @@ export default function Login() {
     <form onSubmit={formik.handleSubmit} autoComplete='on'>
       <main className='flex items-center h-screen w-screen bg-transparent'>
         <div className='w-[50%] h-full hidden justify-center items-center overflow-hidden lg:flex xl:flex'>
-          <img alt='LoginBg' className='object-cover shrink-0 min-w-full max-w-full h-full' src={LoginBg} />
+          <img loading="eager" alt='LoginBg' className='object-cover shrink-0 min-w-full max-w-full h-full' src={LoginBg} />
         </div>
         <div className='flex justify-center grow max-h-full p-5'>
           <div className='bg-white p-7 rounded-xl overflow-y-auto login-form-container border-4 border-black m-5 w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:m-10 md:m-0'>
             <div className='inline-flex justify-center items-center w-full'>
-              <img title='E KART' height={100} width={100} alt='Logo' src={Logo} />
+              <img loading="eager" title='E KART' height={100} width={100} alt='Logo' src={Logo} />
             </div>
             <p className='my-5 font-bold text-black text-3xl bg-gradient-to-r from-[#553c9a] to-[#ee4b2b] inline-block text-transparent bg-clip-text text-center w-full'>{getCurrentTime()}</p>
             <p className='font-bold text-black mb-2.5'>E Mail</p>
@@ -135,7 +135,7 @@ export default function Login() {
               type='button'
               className='h-[50px] gap-3 w-full text-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center justify-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600'>
               Login With Google
-              <img alt='GoogleSvg' src={GoogleSvg} />
+              <img loading="eager" alt='GoogleSvg' src={GoogleSvg} />
             </button>
           </div>
         </div>
